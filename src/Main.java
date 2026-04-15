@@ -6,7 +6,7 @@ import java.util.Set;
 public class Main {
 
   // The time complexity is:
-  // The time complexity for this would be O(x^2)
+  // The time complexity for this would be O(x^2) because x is being looped through two times.
   public static void timesTable(int x) {
     for(int i = 1; i <= x; i++) {
         for(int j = 1; j <= x; j++) {
@@ -17,7 +17,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // O(n)
+  // O(n) because we are looping through n and printing out letter.
   public static void printLetters(String word) {
     char[] letters = word.toCharArray();
 
@@ -27,7 +27,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // O(1)
+  // O(1) because its not looping through n which is password. Its looping through the string array of bannedPasswords.
   public static boolean isBanned(String password) {
     String[] bannedPasswords = {"password", "hello", "qwerty"};
     boolean banned = false;
@@ -41,7 +41,7 @@ public class Main {
 
 
   // The time complexity is:
-  // O(n)
+  // O(n) because n is being looped and returning a total.
   public static int computeProduct(int[] nums) {
     int total = 1;
     for(int num : nums) {
@@ -51,7 +51,7 @@ public class Main {
   }
 
   // The time complexity is:
-  // O(n)
+  // O(n) because n is being called with computeProdut and is being looped through.
   public static void describeProduct(int[] nums) {
     System.out.println("About to compute the product of the array...");
     int product = computeProduct(nums);
@@ -60,7 +60,7 @@ public class Main {
 
 
   // The time complexity is:
-  // O(n)
+  // O(n) because we are looping through n.
   public static int computeFactorial(int n) {
     int result = 1;
     for(int i = 1; i <= n; i++) {
@@ -71,7 +71,7 @@ public class Main {
 
   // Assume that the largest number is no bigger than the length
   // of the array
-  // O(n^2)
+  // O(n^2) because n is being looped twice, which computeFactoria brings along O(n) and is nested.
   public static void computeAllFactorials(int[] nums) {
     for(int num : nums) {
         int result = computeFactorial(num);
@@ -82,7 +82,7 @@ public class Main {
 
   // assume that each String is bounded by a constant length
   // The time complexity is:
-  // O(n)
+  // O(n) because .contain() loops through n and checks for target.
   public static void checkIfContainedArrayList(ArrayList<String> arr, String target) {
     if (arr.contains(target)) {
         System.out.println(target + " is present in the list");
@@ -95,7 +95,7 @@ public class Main {
   // assume n = wordsA.length = wordsB.length
   // assume that each String is bounded by a constant length
   // The time complexity is:
-  // O(n*m) n = wordsA m = wordsB
+  // O(n*m) n = wordsA m = wordsB because they are two different arrays and are nested.
   public static boolean containsOverlap(String[] wordsA, String[] wordsB) {
     for(String wordA : wordsA) {
         for(String wordB : wordsB) {
@@ -109,7 +109,7 @@ public class Main {
 
   // assume that each String is bounded by a constant length
   // The time complexity is:
-  // O(n+m)
+  // O(n+m), two different arrays but seperated.
   public static boolean containsOverlap2(String[] wordsA, String[] wordsB) {
     Set<String> wordsSet = new HashSet<>();
     for(String word : wordsA) {
